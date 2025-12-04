@@ -39,8 +39,6 @@ app.get("/", async (req, res) => {
       ...r.properties,
     }));
 
-    console.log(rows);
-
     res.render("homepage", { title: "Team", rows, properties });
   } catch (err) {
     console.error(err?.response?.data || err.message);
@@ -66,7 +64,7 @@ app.post("/update-team", async (req, res) => {
         member_details,
       },
     });
-    res.render("/");
+    res.redirect("/");
   } catch (err) {
     console.error(err?.response?.data || err.message);
     res.status(500).send("Failed to Create Record");

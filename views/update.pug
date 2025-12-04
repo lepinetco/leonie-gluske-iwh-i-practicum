@@ -1,0 +1,25 @@
+doctype html 
+html 
+    head 
+        meta(charset="utf-8")
+        meta(name="viewport" content="width=device-width, initial-scale=1")
+        title #{title || 'Add Team'}
+        link(rel="stylesheet", href="/css/style.css")
+    body 
+        main.update-form 
+            .main-container
+                form.form(action="/update-team" method="post" novalidate)
+                    .form-field
+                        label(for="member_id") Memeber Id 
+                        input(type="text" id="member_id" name="member_id" required)
+                    .form-field
+                        label(for="member_name") Member Name 
+                        input(type="text" id="member_name" name="member_name" required)
+                    .form-field
+                        label(for="member_name") Member Details
+                        textarea(id="member_details" name="member_details" required)
+                    .form-field
+                        label(for="member_designation") Member Designation
+                        input(type="text" id="member_designation" name="member_designation" required)
+                    .form-field
+                        button.btn(type="submit") Save Team Information

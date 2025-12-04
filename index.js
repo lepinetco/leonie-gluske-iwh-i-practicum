@@ -25,7 +25,7 @@ const hs = axios.create({
 
 app.get("/", async (req, res) => {
   try {
-    const properties = ["book_title", "book_description", "book_author"];
+    const properties = ["member_id", "member_name", "member_details", "member_designation"];
     const limit = 20;
 
     const { data } = await hs.post(`/crm/v3/objects/${OBJECT_TYPE_ID}/search`, {
@@ -38,6 +38,9 @@ app.get("/", async (req, res) => {
       id: r.id,
       ...r.properties,
     }));
+
+    console.log(rows);
+
     res.render("homepage", { title: "Team", rows, properties });
   } catch (err) {
     console.error(err?.response?.data || err.message);

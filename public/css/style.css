@@ -1,58 +1,84 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
 
-body, * {
-    font-family: 'Roboto', sans-serif;
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-h1 {
-    margin: 1rem;
+body {
+  font-family: "Roboto", sans-serif;
 }
 
-.cards {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+header {
+  background: #f7f8f9;
+  padding: 32px;
+  text-align: center;
 }
 
-.card {
-    flex-basis: 31%;
-    margin: 1rem 0.4rem;
-    padding: 1rem 0.4rem 2.5rem 0.4rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+.header-container {
+  max-width: 1024px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.card__email {
-    font-size: 1rem;
+header .header-title {
+  margin-bottom: 16px;
+  font-weight: 700;
 }
 
-.form-wrapper {
-    font-size: 18px;
-    max-width: 768px;
-    margin: 2rem auto;
-    padding: 2rem;
-    border: solid 1px lightgrey;
-    border-radius: 15px;
-    box-shadow: 3px 2px 6px lightgrey;
+main {
+  padding: 48px 20px;
 }
 
-label, input {
-    margin-top: 5px;
-    display: block;
-    font-size: inherit;
+.main-container {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-input[type="text"] {
-    padding: .25rem;
+a.btn {
+  display: inline-block;
+  padding: 18px 32px;
+  background: #464655;
+  color: white;
+  text-decoration: none;
+  border: 2px solid #464655;
+  transition: all 0.3s ease-in-out;
 }
 
-input[type="submit"] {
-    background-color: lightgrey;
-    border: none;
-    padding: .375rem 1rem;
-    margin-top: 10px;
+a.btn:focus {
+  outline: none;
+}
+
+a.btn:hover {
+  background: white;
+  color: #464655;
+  border-color: #464655;
+}
+
+.table {
+  border-collapse: collapse;
+}
+
+.table tr td,
+.table tr th {
+  padding: 10px 16px;
+  border: 1px solid #64646461;
+  vertical-align: top;
+}
+
+.table tr th {
+  padding: 16px;
+  white-space: nowrap;
+  text-align: left;
+  background: #464655;
+  color: white;
+}
+
+table tr td:nth-child(3),
+table tr td:nth-child(5) {
+  white-space: nowrap;
 }
